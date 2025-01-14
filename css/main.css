@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-brand span {
+  letter-spacing: 2px;
+}
+
+/* header */
+#header {
+  background: url("https://images.pexels.com/photos/1008206/pexels-photo-1008206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    top/cover no-repeat;
+}
+
+.header-button button {
+  background-color: #fff;
+  color: black;
+  padding: 10px 28px;
+  border-radius: 25px;
+  border: 2px solid black;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.5s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.header-button button:hover {
+  transform: scale(1.1) !important;
+  background: #272626;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Collection */
+
+.collection-card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 2px solid;
+}
+
+.collection-img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.collection-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.collection-img:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.collection-img span {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* bestsellers */
+
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Image Section */
+.bestsellers-img {
+  flex: 0 0 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bestsellers-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text and Button Section */
+.custom-card-body {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-card-body p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.custom-card-body span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-card-body a {
+  font-size: 14px;
+  padding: 5px 15px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.special-list .btn {
+  padding: 8px 20px !important;
+}
+.bestsellers-img img {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.bestsellers-img:hover img {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* offers */
+#offers {
+  background: url("https://images.pexels.com/photos/5625003/pexels-photo-5625003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    center/cover no-repeat;
+}
+#offers .row {
+  min-height: 60vh;
+}
+.offers-content span {
+  font-size: 28px;
+}
+.offers-content h2 {
+  font-size: 60px;
+}
+.offers-content .btn {
+  border-color: transparent !important;
+}
+
+/* newsletter */
+
+#newsletter p {
+  max-width: 600px;
+}
+#newsletter .input-group {
+  max-width: 500px;
+}
+#newsletter .form-control {
+  border: 1px solid;
+}
+
+/* footer */
+footer .brand {
+  letter-spacing: 2px;
+}
+footer a {
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+/* cart page */
+
+.order-summary {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.quantity button {
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.summary-sidebar {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.order-item img,
+.summary-sidebar img {
+  max-width: 80px;
+  max-height: 80px;
+}
+/* media queries */
+@media (min-width: 992px) {
+  .nav-item {
+    border-bottom: none;
+  }
+}
