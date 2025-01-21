@@ -15,6 +15,58 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+          href="index.html"
+        >
+          <i class="fa-solid fa-shop"></i>
+          <span class="ms-2">ECOMMERCE</span>
+        </a>
+
+        <div class="order-lg-2 nav-btns">
+          <button type="button" class="btn position-relative">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-dark" href="#header">HOME</a>
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-dark" href="#collection">COLLECTION</a>
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-dark" href="#bestsellers">BESTSELLERS</a>
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-dark" href="#about">ABOUT US</a>
+            </li>
+            <li class="nav-item px-2 py-2 border-0">
+              <a class="nav-link text-dark" href="#categories">CATEGORIES</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Page -->
     <div class="container product-page mt-4">
       <div class="row">
         <div class="col-md-6 image-box">
@@ -75,10 +127,61 @@
             <span class="product-price">$12.34</span>
           </p>
 
-          <div class="d-flex align-items-center mb-4">
-            <button class="btn btn-dark">Buy It Now</button>
+          <div class="container mt-5">
+            <!-- Color Selection -->
+            <div>
+              <h5>Select Colors</h5>
+              <div>
+                <div
+                  class="color-circle bg-brown selected"
+                  data-color="Brown"
+                  style="background-color: #6b4f3f"
+                ></div>
+                <div
+                  class="color-circle"
+                  data-color="Green"
+                  style="background-color: #2f4f4f"
+                ></div>
+                <div
+                  class="color-circle"
+                  data-color="Blue"
+                  style="background-color: #3a4f7a"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="mt-4">
+              <h5>Choose Size</h5>
+              <div>
+                <span class="size-option active" data-size="Small">Small</span>
+                <span class="size-option" data-size="Medium">Medium</span>
+                <span class="size-option" data-size="Large">Large</span>
+                <span class="size-option" data-size="X-Large">X-Large</span>
+              </div>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div class="mt-4">
+              <h5>Quantity</h5>
+              <div class="quantity-control">
+                <button class="btn btn-outline-secondary" id="decrease-btn">
+                  -
+                </button>
+                <input type="number" id="quantity-input" value="1" min="1" />
+                <button class="btn btn-outline-secondary" id="increase-btn">
+                  +
+                </button>
+              </div>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <div class="mt-4">
+              <button class="btn btn-dark w-100">Add to Cart</button>
+            </div>
           </div>
-          <p class="product-description">
+
+          <p class="product-description" style="margin-top: 20px">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
             impedit repudiandae, nulla ab labore est magni vitae beatae neque
             culpa quia unde. Odit et maiores molestiae, laudantium temporibus
@@ -92,37 +195,137 @@
       </div>
     </div>
 
-    <hr class="container mt-5" />
+    <!-- section 2 -->
 
     <div class="container mt-5">
-      <h2 class="fs-3">About Product</h2>
-      <div class="lh-1 mt-4">
-        <p>Name: Product</p>
-        <p>Color: Color</p>
-        <p>Material: Material</p>
-        <p>Type: Type</p>
-      </div>
-    </div>
-    <hr class="container mt-5" />
+      <ul class="nav nav-tabs justify-content-center" id="tab-menu">
+        <li class="nav-item">
+          <button class="nav-link active" data-tab="product-details">
+            Product Details
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-tab="reviews">Rating & Reviews</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-tab="faq">FAQs</button>
+        </li>
+      </ul>
 
-    <div class="container mt-5">
-      <h2 class="fs-3">About Product</h2>
-      <div class="lh-1 mt-4">
-        <p>Name: Product</p>
-        <p>Color: Color</p>
-        <p>Material: Material</p>
-        <p>Type: Type</p>
-      </div>
-    </div>
-    <hr class="container mt-5" />
+      <div class="tab-content-container mt-4">
+        <div id="product-details" class="tab-content active">
+          <h3>Product Details</h3>
+          <hr class="container mt-5" />
 
-    <div class="container mt-5">
-      <h2 class="fs-3">About Product</h2>
-      <div class="lh-1 mt-4">
-        <p>Name: Product</p>
-        <p>Color: Color</p>
-        <p>Material: Material</p>
-        <p>Type: Type</p>
+          <div class="container mt-5">
+            <h2 class="fs-3">About Product</h2>
+            <div class="lh-1 mt-4">
+              <p>Name: Product</p>
+              <p>Color: Color</p>
+              <p>Material: Material</p>
+              <p>Type: Type</p>
+            </div>
+          </div>
+          <hr class="container mt-5" />
+
+          <div class="container mt-5">
+            <h2 class="fs-3">About Product</h2>
+            <div class="lh-1 mt-4">
+              <p>Name: Product</p>
+              <p>Color: Color</p>
+              <p>Material: Material</p>
+              <p>Type: Type</p>
+            </div>
+          </div>
+          <hr class="container mt-5" />
+
+          <div class="container mt-5">
+            <h2 class="fs-3">About Product</h2>
+            <div class="lh-1 mt-4">
+              <p>Name: Product</p>
+              <p>Color: Color</p>
+              <p>Material: Material</p>
+              <p>Type: Type</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div id="reviews" class="tab-content">
+          <h3>All Reviews (451)</h3>
+          <div class="row">
+            <!-- Review Card -->
+            <div class="col-md-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Person 1</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                    inventore ipsam perspiciatis qui id impedit suscipit maiores
+                    eaque consequuntur dicta. Autem totam dolorem excepturi eius
+                    vitae amet provident veritatis similique.
+                  </p>
+                  <p class="text-muted">Posted on August 14, 2023</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Person 2</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident similique temporibus aliquid earum, eius ex
+                    nesciunt voluptatem minima soluta commodi quo doloribus
+                    ducimus molestias maiores culpa eum officiis itaque non.
+                  </p>
+                  <p class="text-muted">Posted on August 15, 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQs -->
+        <div id="faq" class="tab-content">
+          <h3>FAQs</h3>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                >
+                  What is the return policy?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  You can return the product within 30 days of purchase.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  How long does shipping take?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Shipping typically takes 5-7 business days.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -183,6 +386,148 @@
       </div>
     </section>
 
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row text-white g-4">
+          <div class="col-md-6 col-lg-3">
+            <a class="text-decoration-none brand text-white" href="index.html"
+              >ECOMMERCE STORE</a
+            >
+            <p class="text-white mt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              mollitia quisquam veniam odit cupiditate, ullam aut voluptas velit
+              dolor ipsam?
+            </p>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light">Links</h5>
+            <ul class="list-unstyled">
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none"> Home </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none">
+                  Collection
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none"> Blogs </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none">
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Contact Us</h5>
+            <div class="d-flex justify-content-start align-items-start my-2">
+              <span class="me-3">
+                <i class="fas fa-map-marked-alt"></i>
+              </span>
+              <span class="fw-light"> location </span>
+            </div>
+            <div class="d-flex justify-content-start align-items-start my-2">
+              <span class="me-3">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="fw-light"> mail@mail.com </span>
+            </div>
+            <div class="d-flex justify-content-start align-items-start my-2">
+              <span class="me-3">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span class="fw-light"> +977 123123123 </span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Follow Us</h5>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li>
+                  <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none fs-4 me-4">
+                    <i class="fab fa-pinterest"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Color selection functionality
+      document.querySelectorAll(".color-circle").forEach((circle) => {
+        circle.addEventListener("click", function () {
+          document
+            .querySelectorAll(".color-circle")
+            .forEach((c) => c.classList.remove("selected"));
+          this.classList.add("selected");
+          console.log("Selected color:", this.getAttribute("data-color"));
+        });
+      });
+
+      // Size selection functionality
+      document.querySelectorAll(".size-option").forEach((option) => {
+        option.addEventListener("click", function () {
+          document
+            .querySelectorAll(".size-option")
+            .forEach((opt) => opt.classList.remove("active"));
+          this.classList.add("active");
+          console.log("Selected size:", this.getAttribute("data-size"));
+        });
+      });
+
+      // Quantity selection functionality
+      const quantityInput = document.getElementById("quantity-input");
+      document.getElementById("decrease-btn").addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+      document.getElementById("increase-btn").addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value);
+        quantityInput.value = currentValue + 1;
+      });
+
+      const tabs = document.querySelectorAll(".nav-link");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active class from all tabs and contents
+          tabs.forEach((t) => t.classList.remove("active"));
+          tabContents.forEach((content) => content.classList.remove("active"));
+
+          // Add active class to clicked tab and corresponding content
+          tab.classList.add("active");
+          document
+            .getElementById(tab.getAttribute("data-tab"))
+            .classList.add("active");
+        });
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

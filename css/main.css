@@ -95,7 +95,6 @@ body {
   overflow: hidden;
 }
 
-/* Image Section */
 .bestsellers-img {
   flex: 0 0 70%;
   height: 70%;
@@ -110,7 +109,6 @@ body {
   object-fit: cover;
 }
 
-/* Text and Button Section */
 .custom-card-body {
   flex: 1;
   padding: 10px;
@@ -228,4 +226,203 @@ footer a {
   .nav-item {
     border-bottom: none;
   }
+}
+
+/* Testimonials CSS */
+
+.testimonials-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.arrow-btn.left {
+  left: 0;
+}
+
+.arrow-btn.right {
+  right: 0;
+}
+
+.arrow-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.testimonial-container-wrapper {
+  margin-top: 20px;
+}
+
+.testimonial-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.testimonial-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  flex: 0 0 calc(33.333% - 20px);
+}
+
+.testimonial-card h5 {
+  font-weight: bold;
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+.testimonial-card .rating {
+  color: #ffc107;
+}
+
+.testimonial-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonial-container::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 4px;
+}
+
+.testimonial-container::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+@media (max-width: 992px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-card {
+    flex: 0 0 calc(100% - 20px);
+  }
+}
+
+/* Categories Sidebar CSS */
+.filter-sidebar {
+  border-radius: 8px;
+  width: 250px;
+  max-width: 100%;
+}
+
+.filter-sidebar h5 {
+  font-size: 1.25rem;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 4px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.color-box.active {
+  border: 2px solid #000;
+}
+
+.size-box {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.size-box.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+@media (max-width: 768px) {
+  .filter-sidebar {
+    padding: 10px;
+  }
+
+  .color-box {
+    width: 16px;
+    height: 16px;
+  }
+
+  .size-box {
+    font-size: 12px;
+  }
+}
+
+/* product info */
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.color-circle.selected {
+  border: 2px solid black;
+}
+.size-option {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+}
+.size-option.active {
+  background-color: black;
+  color: white;
+}
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quantity-control button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.quantity-control input {
+  width: 50px;
+  text-align: center;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
 }
