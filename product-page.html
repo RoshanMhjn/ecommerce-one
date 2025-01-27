@@ -476,7 +476,6 @@
     </footer>
 
     <script>
-      // Color selection functionality
       document.querySelectorAll(".color-circle").forEach((circle) => {
         circle.addEventListener("click", function () {
           document
@@ -487,7 +486,6 @@
         });
       });
 
-      // Size selection functionality
       document.querySelectorAll(".size-option").forEach((option) => {
         option.addEventListener("click", function () {
           document
@@ -498,7 +496,6 @@
         });
       });
 
-      // Quantity selection functionality
       const quantityInput = document.getElementById("quantity-input");
       document.getElementById("decrease-btn").addEventListener("click", () => {
         let currentValue = parseInt(quantityInput.value);
@@ -516,11 +513,9 @@
 
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-          // Remove active class from all tabs and contents
           tabs.forEach((t) => t.classList.remove("active"));
           tabContents.forEach((content) => content.classList.remove("active"));
 
-          // Add active class to clicked tab and corresponding content
           tab.classList.add("active");
           document
             .getElementById(tab.getAttribute("data-tab"))
